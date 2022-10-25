@@ -21,10 +21,11 @@ module.exports = {
     'no-var': 'error',
 
     'prefer-const': 'error',
+
     'prettier/prettier': ['error', {endOfLine: 'auto'}],
     'react-native/no-inline-styles': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     semi: ['error', 'never'],
   },
-};
+}

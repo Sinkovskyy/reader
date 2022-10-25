@@ -1,8 +1,12 @@
 import React from 'react'
-import {Text} from 'react-native'
+import {Screens} from './src/screens'
 
 const App = () => {
-  return <Text>console</Text>
+  return (
+    <>
+      <Screens.Main />
+    </>
+  )
 }
 
 export default App
