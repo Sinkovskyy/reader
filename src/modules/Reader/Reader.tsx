@@ -4,10 +4,10 @@ import {useFileSystem} from '@epubjs-react-native/file-system'
 import {SafeAreaView, useWindowDimensions} from 'react-native'
 import {useState} from 'react'
 import RNFS from 'react-native-fs'
-
 import {Books} from '@app/common/books'
-import {TReaderPosition} from '@app/common/types'
 import {Utils} from '@app/common/utils'
+
+import {TReaderPosition} from './types'
 
 const DEFAULT_PAGE = '1'
 
@@ -24,7 +24,7 @@ export const Reader = () => {
     Utils.Reader.setLocation(cfi)
   }
 
-  const getBook = () => {
+  const fetchBook = () => {
     RNFS.readFileAssets(Books.MobiDick, 'base64')
       .then(res => {
         setBook(res)
@@ -40,7 +40,7 @@ export const Reader = () => {
   }
 
   useEffect(() => {
-    getBook()
+    fetchBook()
     getCurrentPosition()
   }, [])
 
