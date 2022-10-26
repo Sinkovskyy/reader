@@ -10,6 +10,7 @@ import {Utils} from '@app/common/utils'
 import {TReaderPosition} from './types'
 
 const DEFAULT_PAGE = '1'
+const ENCODING = 'base64'
 
 export const Reader = () => {
   const {width, height} = useWindowDimensions()
@@ -25,7 +26,7 @@ export const Reader = () => {
   }
 
   const fetchBook = () => {
-    RNFS.readFileAssets(Books.MobiDick, 'base64')
+    RNFS.readFileAssets(Books.MobiDick, ENCODING)
       .then(res => {
         setBook(res)
       })
