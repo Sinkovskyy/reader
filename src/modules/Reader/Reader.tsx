@@ -55,7 +55,7 @@ export const Reader = () => {
           onLocationChange={(total, currentLocation) =>
             // Library error. In types return number. In real case it is object
             // @ts-ignore
-            onLocationChange(currentLocation as TReaderPosition)
+            onLocationChange(currentLocation)
           }
           initialLocation={position}
         />
